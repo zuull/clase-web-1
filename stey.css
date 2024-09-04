@@ -1,10 +1,94 @@
-.indice{
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #6A5ACD;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style-type: none;
     display: flex;
-    background-color: #04AA6D;
-    color: white;
-    padding: 15px 32px;
+    justify-content: space-around;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #E6E6FA;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.fotos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+article {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(106, 90, 205, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E6E6FA;
+}
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(106, 90, 205, 0.2);
+}
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+article section {
+    padding: 1rem;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #6A5ACD;
+    color: #fff;
     text-align: center;
-    display: inline-block;
-    margin: 4px 2px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos adicionales */
+h1, h2 {
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 20px;
+}
+main > p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #6A5ACD;
+}
+
+button{
+    background-color: plum ;
     cursor: pointer;
+    bottom: 30px;
+
 }

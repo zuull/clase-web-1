@@ -87,7 +87,7 @@ main > p {
 }
 
 button{
-    background-color: plum ;
+    background-color: rgb(200, 169, 214) ;
     cursor: pointer;
-
+    text-wrap:nowrap
 }

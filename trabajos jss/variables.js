@@ -4,7 +4,7 @@ let nombre = "alejandra";
 let apellido 
 prompt = "escribe tu nombre"
 
-if (prompt == "alejandra"){
+if (nombre == "alejandra"){
     document.write("eresde apellido cardona");
 
 }

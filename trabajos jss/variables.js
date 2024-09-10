@@ -2,12 +2,15 @@
 
 let nombre = "alejandra";
 let apellido 
-prompt = "escribe tu nombre"
+
 
 if (nombre == "alejandra"){
-    document.write("eresde apellido cardona");
+    document.write("eres de apellido cardona");
 
 }
-else nombre != "alejandra";
+else (nombre != "alejandra")
 apellido = "no sabemos tu apellido  ";
 document.write(apellido);
+
+prompt = "escribe tu nombre"
+

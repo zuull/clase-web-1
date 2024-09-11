@@ -2,10 +2,10 @@
 let nombre = prompt("Pon tu nombre");
 let apellido;
 let numero = prompt("Escribe tu número");
+let numAleja = 2;
 let edad;
 //const
 const nombreCorrecto = "alejandra";
-const numAleja = 2;
 const edadAle = 20;
 const saludoGenerico = "Bienvenida <b>";
 const saludoAleja = "Bienvenida Aleja";

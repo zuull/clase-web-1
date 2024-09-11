@@ -1,36 +1,35 @@
-//las variables  let 
+// Variables
+let nombre = prompt("Pon tu nombre");
+let apellido;
+let numero = prompt("Escribe tu número");
+let edad;
+//const
+const nombreCorrecto = "alejandra";
+const numAleja = 2;
+const edadAle = 20;
+const saludoGenerico = "Bienvenida <b>";
+const saludoAleja = "Bienvenida Aleja";
+const saludarNuevo = "Puedes entrar por ser mayor de edad";
 
-let nombre =(prompt ("pon tu nombre"));
-let apellido ;
-let numero= (prompt("escribe tu numero"));
-let edad ;
-let saludarNuevo = (" puedes entrar por ser mayor de edad")
+// Función con cero parámetros
+const mostrarSaludoGenerico = () => {
+    document.write(saludoGenerico + "<br>");
+};
 
+mostrarSaludoGenerico();
 
-const nombreCorrecto = ("alejandra");
-const numAleja = (2);
-const numeroNuevo = (5)
-const edadAle = (20)
-const saludar = ("bienvenida aleja ")
-
-
-
-if (nombre === nombreCorrecto  ||  numero == numAleja){
-    apellido = ("eres de apellido cardona" + "<br>");
-    document.write (apellido);
-        if (nombre === nombreCorrecto  &&  edadAle == 20 ){
-            document.write(saludar + " y recuerda que tu ID es 2");
-            }
+if (nombre === nombreCorrecto && numero == numAleja) {
+    apellido = "Eres de apellido Cardona" + "<br>";
+    document.write(apellido);
+    if (edadAle === 20) {
+        document.write(saludoAleja + " y recuerda que tu ID es " + numAleja + "<br>");
     }
-
-else{ (nombre != "alejandra")
-let apellido =(prompt ("pon tu apellido "));
-document.write ("tu apellido es " + apellido + "<br>")
-let edad =(prompt ("pon tu edad"));
-    if (edad > 18){
-        document.write (saludarNuevo + "y rescuerda que tu ID es " + numero + "<br>")
-    } 
-document.write ("tu numero es " + numero)
-
+} else {
+    apellido = prompt("Pon tu apellido");
+    document.write("Tu apellido es " + apellido + "<br>");
+    edad = prompt("Pon tu edad");
+    if (edad > 18) {
+        document.write(saludarNuevo + " y recuerda que tu ID es " + numero + "<br>");
+    }
+    document.write("Tu número es " + numero + "<br>");
 }
-

@@ -1,13 +1,12 @@
-// Variables
 let nombre = prompt("Pon tu nombre");
 let apellido;
 let numero = prompt("Escribe tu número");
-let numAleja = 2;
 let edad;
 //const
+const numAleja = 2;
 const nombreCorrecto = "alejandra";
 const edadAle = 20;
-const saludoGenerico = "Bienvenida <b>";
+const saludoGenerico = "<b>Bienvenida</b>";
 const saludoAleja = "Bienvenida Aleja";
 const saludarNuevo = "Puedes entrar por ser mayor de edad";
 
@@ -16,7 +15,16 @@ const mostrarSaludoGenerico = () => {
     document.write(saludoGenerico + "<br>");
 };
 
+// Mostrar saludo genérico al principio
 mostrarSaludoGenerico();
+
+const verificarEdad = (edad) => {
+    if (edad >= 18) {
+        document.write(saludarNuevo + "<br>");
+    } else {
+        document.write("No puedes entrar por ser menor de edad.<br>");
+    }
+};
 
 if (nombre === nombreCorrecto && numero == numAleja) {
     apellido = "Eres de apellido Cardona" + "<br>";
@@ -27,9 +35,7 @@ if (nombre === nombreCorrecto && numero == numAleja) {
 } else {
     apellido = prompt("Pon tu apellido");
     document.write("Tu apellido es " + apellido + "<br>");
-    edad = prompt("Pon tu edad");
-    if (edad > 18) {
-        document.write(saludarNuevo + " y recuerda que tu ID es " + numero + "<br>");
-    }
+    edad = parseInt(prompt("Pon tu edad"), 10); // Convertir edad a número entero
+    verificarEdad(edad);
     document.write("Tu número es " + numero + "<br>");
 }

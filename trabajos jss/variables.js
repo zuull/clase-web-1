@@ -1,7 +1,8 @@
 let nombre = prompt("Pon tu nombre");
 let apellido;
-let numero = prompt("Escribe tu número");
+let numero = prompt("Escribe tu número del 1 al 5 para abrir la caja de sorpresas");
 let edad;
+let password
 //const
 const numAleja = 2;
 const nombreCorrecto = "alejandra";
@@ -18,6 +19,8 @@ const mostrarSaludoGenerico = () => {
 // Mostrar saludo genérico al principio
 mostrarSaludoGenerico();
 
+const sumar = (a,b) => a + b;
+
 const verificarEdad = (edad) => {
     if (edad >= 18) {
         document.write(saludarNuevo + "<br>");
@@ -25,6 +28,28 @@ const verificarEdad = (edad) => {
         document.write("No puedes entrar por ser menor de edad.<br>");
     }
 };
+
+const cajitaSorpresas = () => {
+    switch (numero) {
+        case "1":
+            document.write("Brownie")
+            break;
+        case "2":
+            document.write("Botella de agua")
+            break;
+        case "3":
+            document.write("Papas")
+            break;
+        case "4":
+            document.write("Aguacate")
+            break;
+        case "5":
+            document.write("Nada")
+            break;
+    }
+};
+
+cajitaSorpresas(numero);
 
 if (nombre === nombreCorrecto && numero == numAleja) {
     apellido = "Eres de apellido Cardona" + "<br>";

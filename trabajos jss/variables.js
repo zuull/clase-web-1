@@ -3,6 +3,7 @@ let apellido;
 let numero = prompt("Escribe tu número del 1 al 5 para abrir la caja de sorpresas");
 let edad;
 let password
+let frutas = prompt("coloca tus frutas favoritas separadas por ,")
 //const
 const numAleja = 2;
 const nombreCorrecto = "alejandra";
@@ -11,7 +12,6 @@ const saludoGenerico = "<b>Bienvenida</b>";
 const saludoAleja = "Bienvenida Aleja";
 const saludarNuevo = "Puedes entrar por ser mayor de edad";
 
-// Función con cero parámetros
 const mostrarSaludoGenerico = () => {
     document.write(saludoGenerico + "<br>");
 };
@@ -29,22 +29,29 @@ const verificarEdad = (edad) => {
     }
 };
 
+const mostrarFrutas = () => {
+    frutas.split(',').forEach((fruta, index) => document.write('fruta #' + (index + 1) + ' ' + fruta + '<br>'))
+}
+
+mostrarFrutas();
+
+
 const cajitaSorpresas = () => {
     switch (numero) {
         case "1":
-            document.write("Brownie")
+            document.write("Brownie. <br>")
             break;
         case "2":
-            document.write("Botella de agua")
+            document.write("Botella de agua. <br>")
             break;
         case "3":
-            document.write("Papas")
+            document.write("Papas. <br>")
             break;
         case "4":
-            document.write("Aguacate")
+            document.write("Aguacate. <br>")
             break;
         case "5":
-            document.write("Nada")
+            document.write("Nada. <br>")
             break;
     }
 };

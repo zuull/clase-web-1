@@ -88,6 +88,6 @@ main > p {
 
 button{
     background-color: rgb(200, 169, 214) ;
-    cursor: pointer;
-    text-wrap:nowrap
+    cursor: pointer
+    
 }

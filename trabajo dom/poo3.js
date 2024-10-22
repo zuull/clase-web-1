@@ -28,4 +28,4 @@
     //     const elemento = new Elemento('mi-parrafo');
     //     const boton = new Boton('mi-parrafo', 'btn-cambiar-color');
     // });
-console.log("hola mundo")
+alert("hola mundo")

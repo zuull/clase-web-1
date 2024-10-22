@@ -1,38 +1,38 @@
 class Usuario {
     constructor(nombre, edad) {
-        this.nombre = nombre; 
-        this.edad = edad;  
+        this.nombre = nombre;
+        this.edad = edad;
     }
 }
 
 class Administrador extends Usuario {
     constructor(nombre, edad) {
-        super(nombre, edad); 
-        this.rol = 'Administrador'; 
+        super(nombre, edad);
     }
 
-    mostrarInfo() {
-        const output = document.getElementById('output');
-        output.innerHTML = `Nombre: ${this.nombre}, Edad: ${this.edad}, Rol: ${this.rol}`;
+    mostrarMensaje() {
+        const mensaje = `Nombre: ${this.nombre}, Edad: ${this.edad}, Rol: Administrador`;
+        document.getElementById('resultado').innerText = mensaje;
     }
 }
 
-// Clase hija Comercial
 class Comercial extends Usuario {
     constructor(nombre, edad) {
-        super(nombre, edad); 
-        this.rol = 'Comercial'; 
+        super(nombre, edad);
     }
 
-    mostrarInfo() {
-        const output = document.getElementById('output');
-        output.innerHTML = `Nombre: ${this.nombre}, Edad: ${this.edad}, Rol: ${this.rol}`;
+    mostrarMensaje() {
+        const mensaje = `Nombre: ${this.nombre}, Edad: ${this.edad}, Rol: Comercial`;
+        document.getElementById('resultado').innerText = mensaje;
     }
 }
 
-// Crear instancias de las clases
-const admin = new Administrador('Juan', 30);
-const comercial = new Comercial('María', 25);
+function inicializar() {
+    const admin = new Administrador('Juan', 30);
+    const comercial = new Comercial('María', 25);
 
-document.getElementById('adminBtn').addEventListener('click', () => admin.mostrarInfo());
-document.getElementById('comercialBtn').addEventListener('click', () => comercial.mostrarInfo());
+    document.getElementById('btnAdmin').addEventListener('click', () => admin.mostrarMensaje());
+    document.getElementById('btnComercial').addEventListener('click', () => comercial.mostrarMensaje());
+}
+
+document.addEventListener('DOMContentLoaded', inicializar);
